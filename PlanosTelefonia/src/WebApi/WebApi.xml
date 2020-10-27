@@ -1,0 +1,217 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>WebApi</name>
+    </assembly>
+    <members>
+        <member name="M:WebApi.Controllers.ClienteController.Get">
+            <summary>
+            Busca todos Clientes
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Clientes</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.ClienteController.Get(System.Guid)">
+            <summary>
+            Busca os Clientes por Id
+            </summary>
+            <param name="id">Id do cliente</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Clientes</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.ClienteController.Post(WebApi.Application.ViewModels.ClienteViewModel)">
+            <summary>
+            Atualiza o Cliente
+            </summary>
+            <param name="viewModel">Cliente</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Atualiza o Cliente</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.ClienteController.Put(WebApi.Application.ViewModels.ClienteViewModel)">
+            <summary>
+            Novo Cliente
+            </summary>
+            <param name="viewModel">Cliente</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Cria o Cliente</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.ClienteController.Delete(System.Guid)">
+            <summary>
+            Apaga o Cliente
+            </summary>
+            <param name="id">Id do Cliente</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Deleta o Cliente</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.OperadoraController.Get">
+            <summary>
+            Busca todas Operadoras
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com as Operadoras</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.OperadoraController.Get(System.Guid)">
+            <summary>
+            Busca as Operadoras por Id
+            </summary>
+            <param name="id">Id da Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com as Operadoras</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.OperadoraController.Post(WebApi.Application.ViewModels.OperadoraViewModel)">
+            <summary>
+            Atualiza A Operadora
+            </summary>
+            <param name="viewModel">Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Atualiza a Operadora</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.OperadoraController.Put(WebApi.Application.ViewModels.OperadoraViewModel)">
+            <summary>
+            Nova Operadora
+            </summary>
+            <param name="viewModel">Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Cria a Operadora</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.OperadoraController.Delete(System.Guid)">
+            <summary>
+            Apaga a Operadora
+            </summary>
+            <param name="id">Id da Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Deleta a Operadora</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.GetByType(WebApi.Domain.Models.TipoPlano)">
+            <summary>
+            Busca por Tipo do Plano
+            </summary>
+            <param name="tipo">0: Controle - 1: Pós-Pago - 2: Pré-Pago</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Planos</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.GetByOperatorName(System.String)">
+            <summary>
+            Busca por Id da Operadora
+            </summary>
+            <param name="nomeOperadora">Nome da Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Planos</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.GetByOperator(System.Guid)">
+            <summary>
+            Busca por Id da Operadora
+            </summary>
+            <param name="IdOperadora">Id da Operadora</param>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Planos</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.Get">
+            <summary>
+            Busca todos os Planos
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Lista com os Planos</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.Get(System.Guid)">
+            <summary>
+            Busca por Id
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Detalhe do Plano</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.Post(WebApi.Application.ViewModels.PlanoViewModel)">
+            <summary>
+            Novo Plano
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Cria um novo Plano</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.Put(WebApi.Application.ViewModels.PlanoViewModel)">
+            <summary>
+            Atualiza o Plano 
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Atualiza o Plano</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+        <member name="M:WebApi.Controllers.PlanoController.Delete(System.Guid)">
+            <summary>
+            Apaga o Plano por Id
+            </summary>
+            <remarks>
+            *Necessário a autenticação Bearer
+            </remarks>
+            <response code="200">Sucesso: Apaga o Plano</response>
+            <response code="400">BadRequest: Erros de Modelo</response> 
+            <response code="401">Unauthorized: Acesso não Autorizado</response> 
+        </member>
+    </members>
+</doc>
